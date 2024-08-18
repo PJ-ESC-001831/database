@@ -5,7 +5,8 @@
   "description": "Repo that contains the database models and structures to be shared across the services.",
   "main": "index.js",
   "scripts": {
-    "drizzle:generate": "drizzle-kit generate --config ./drizzle.config.ts"
+    "drizzle:generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "drizzle:sync": "drizzle-kit sync --config ./drizzle.config.ts"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
     "url": "https://github.com/PJ-ESC-001831/database/issues"
   },
   "homepage": "https://github.com/PJ-ESC-001831/database#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "eslint-plugin-drizzle": "^0.2.3"
+  }
 }
