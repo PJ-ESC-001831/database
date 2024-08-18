@@ -1,0 +1,27 @@
+{
+  "name": "co-maker-database",
+  "version": "1.0.0",
+  "description": "Repo that contains the database models and structures to be shared across the services.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PJ-ESC-001831/database.git"
+  },
+  "keywords": [
+    "drizzle",
+    "postgres",
+    "database",
+    "typescript"
+  ],
+  "author": "jaak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PJ-ESC-001831/database/issues"
+  },
+  "homepage": "https://github.com/PJ-ESC-001831/database#readme",
+  "dependencies": {
+    "drizzle-orm": "^0.33.0",
+    "pg": "^8.12.0"
+  }
+}
