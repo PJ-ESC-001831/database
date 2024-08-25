@@ -1,5 +1,6 @@
 import { pgTable, serial, text, integer, json } from 'drizzle-orm/pg-core';
-import { campaigns } from './Campaign';
+
+import { campaigns } from './campaigns';
 
 // Define the Variant table
 export const variants = pgTable('variants', {

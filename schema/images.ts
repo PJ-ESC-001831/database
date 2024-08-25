@@ -1,6 +1,6 @@
 import { pgTable, serial, text, integer, uuid } from 'drizzle-orm/pg-core';
 
-import { campaigns } from './Campaign';
+import { campaigns } from './campaigns';
 
 // Define the Images table
 export const images = pgTable('images', {

@@ -1,8 +1,8 @@
 import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
-import { campaigns } from './Campaign';
-import { users } from './User';
+import { campaigns } from './campaigns';
+import { users } from './users';
 
 // Define the Transaction table
 export const transactions = pgTable('transactions', {

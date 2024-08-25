@@ -1,7 +1,7 @@
 import { pgTable, serial, text, integer, timestamp, index } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
-import { transactions } from './Transaction';
+import { transactions } from './transactions';
 
 // Define the Allocation table
 export const allocations = pgTable('allocations', {
