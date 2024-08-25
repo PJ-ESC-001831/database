@@ -5,8 +5,8 @@
   "description": "Repo that contains the database models and structures to be shared across the services.",
   "main": "index.js",
   "scripts": {
-    "drizzle:generate": "drizzle-kit generate --config ./drizzle.config.ts",
-    "drizzle:sync": "drizzle-kit sync --config ./drizzle.config.ts"
+    "drizzle-kit:generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "drizzle-kit:migrate": "drizzle-kit migrate --config ./drizzle.config.ts"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
+    "dotenv": "^16.4.5",
     "eslint-plugin-drizzle": "^0.2.3"
   }
 }
