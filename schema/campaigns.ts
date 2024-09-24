@@ -1,7 +1,7 @@
 import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
-import { users } from './users';
+import { sellers } from './users';
 
 // Define the Campaign table
 export const campaigns = pgTable('campaigns', {
@@ -9,7 +9,9 @@ export const campaigns = pgTable('campaigns', {
   title: text('title').notNull(),
   description: text('description').notNull(),
   costBase: integer('cost_base').notNull(),
-  sellerId: integer('seller_id').notNull().references(() => users.id),
+  sellerId: integer('seller_id')
+    .notNull()
+    .references(() => sellers.id),
   createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
   checkoutLink: text('checkout_link').notNull(),
 });
