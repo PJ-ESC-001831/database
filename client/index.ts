@@ -36,10 +36,11 @@ export default class Connection {
    * @async
    * @throws Will throw an error if the database connection or configuration fails.
    */
-  public async configure() {
+  public async configure(): Promise<Connection> {
     try {
       await this.setClient();
       await this.setDb();
+      return this;
     } catch (error) {
       logger.error('Failed to configure the database connection:', error);
       throw error;
@@ -53,9 +54,10 @@ export default class Connection {
    * @async
    * @throws {ClientError} Will throw an error if setting the database client fails.
    */
-  private async setClient() {
+  private async setClient(): Promise<Connection> {
     try {
       this.client = await this.pool.connect();
+      return this;
     } catch (error) {
       logger.error('Failed to set the database client:', error);
       throw new ClientError('Failed to set the database client');
@@ -69,13 +71,14 @@ export default class Connection {
    * @async
    * @throws {ClientError} Will throw an error if the client is not set or if setting the database instance fails.
    */
-  private async setDb() {
+  private async setDb(): Promise<Connection> {
     if (!this.client) {
       throw new ClientError('Client not set');
     }
 
     try {
       this.db = await drizzle(this.client);
+      return this;
     } catch (error) {
       logger.error('Failed to set the database instance:', error);
       throw new ClientError('Failed to set the database instance');
