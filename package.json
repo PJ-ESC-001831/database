@@ -1,7 +1,6 @@
 {
   "name": "co-maker-database",
   "version": "1.0.0",
-  "type": "module",
   "description": "Repo that contains the database models and structures to be shared across the services.",
   "main": "index.js",
   "scripts": {

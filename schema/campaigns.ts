@@ -1,7 +1,7 @@
 import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
-import { sellers } from './users';
+import { sellers } from './sellers';
 
 // Define the Campaign table
 export const campaigns = pgTable('campaigns', {

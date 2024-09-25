@@ -15,6 +15,13 @@
       "when": 1724496249659,
       "tag": "0001_thin_randall",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727281234884,
+      "tag": "0002_huge_psylocke",
+      "breakpoints": true
     }
   ]
 }

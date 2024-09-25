@@ -11,9 +11,3 @@ export const users = pgTable('users', {
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
-
-// Define the Seller type
-export const sellers = pgTable('sellers', {
-  id: serial('id').primaryKey(),
-  userId: serial('user_id').notNull().references(() => users.id),
-});
