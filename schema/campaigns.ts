@@ -8,7 +8,7 @@ export const campaigns = pgTable('campaigns', {
   id: serial('id').primaryKey(),
   title: text('title').notNull(),
   description: text('description').notNull(),
-  costBase: integer('cost_base').notNull(),
+  costBase: integer('cost_base'),
   sellerId: integer('seller_id')
     .notNull()
     .references(() => sellers.id),
