@@ -13,5 +13,5 @@ export const campaigns = pgTable('campaigns', {
     .notNull()
     .references(() => sellers.id),
   createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
-  checkoutLink: text('checkout_link').notNull(),
+  checkoutLink: text('checkout_link'),
 });

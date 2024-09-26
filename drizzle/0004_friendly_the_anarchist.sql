@@ -1,0 +1,1 @@
+ALTER TABLE "campaigns" ALTER COLUMN "checkout_link" DROP NOT NULL;
