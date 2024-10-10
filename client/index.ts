@@ -1,7 +1,11 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
 import { labeledLogger } from '@modules/logger';
-import { drizzle, NodePgClient } from 'drizzle-orm/node-postgres';
+import {
+  drizzle,
+  NodePgClient,
+  NodePgDatabase,
+} from 'drizzle-orm/node-postgres';
 import { ClientError } from './errors';
 
 const logger = labeledLogger('database:client');
@@ -12,7 +16,7 @@ dotenv.config();
 export default class Connection {
   private pool: Pool;
   private client: NodePgClient | undefined = undefined;
-  private db: any | undefined = undefined;
+  private db?: NodePgDatabase<Record<string, never>>;
 
   /**
    * Initializes the Connection instance, sets up the connection pool, and configures the database client and instance.
