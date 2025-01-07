@@ -36,6 +36,20 @@
       "when": 1727369099193,
       "tag": "0004_friendly_the_anarchist",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1736181262919,
+      "tag": "0005_magical_squadron_supreme",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1736181326137,
+      "tag": "0006_rainy_smasher",
+      "breakpoints": true
     }
   ]
 }
