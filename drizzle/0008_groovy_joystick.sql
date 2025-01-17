@@ -1,0 +1,1 @@
+ALTER TABLE "images" ALTER COLUMN "bucket" SET NOT NULL;

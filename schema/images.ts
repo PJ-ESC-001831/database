@@ -10,5 +10,5 @@ export const images = pgTable('images', {
     .notNull()
     .references(() => campaigns.id),
   key: text('key').notNull(),
-  bucket: text('bucket'),
+  bucket: text('bucket').notNull(),
 });

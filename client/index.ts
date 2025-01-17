@@ -1,4 +1,4 @@
-import { Pool } from 'pg';
+import { Pool, PoolClient } from 'pg';
 import dotenv from 'dotenv';
 import { labeledLogger } from '@modules/logger';
 import {
@@ -35,7 +35,6 @@ export default class Connection {
 
   /**
    * Configures the database connection by setting the client and the database instance.
-   *
    * @public
    * @async
    * @throws Will throw an error if the database connection or configuration fails.
@@ -53,7 +52,6 @@ export default class Connection {
 
   /**
    * Sets the database client using the connection pool.
-   *
    * @private
    * @async
    * @throws {ClientError} Will throw an error if setting the database client fails.
@@ -70,7 +68,6 @@ export default class Connection {
 
   /**
    * Sets the database instance using the drizzle ORM.
-   *
    * @private
    * @async
    * @throws {ClientError} Will throw an error if the client is not set or if setting the database instance fails.
@@ -91,7 +88,6 @@ export default class Connection {
 
   /**
    * Returns the database instance.
-   *
    * @returns The database instance.
    */
   public getDb() {
@@ -100,7 +96,6 @@ export default class Connection {
 
   /**
    * Returns the database client.
-   *
    * @returns The database client.
    */
   public getClient() {
