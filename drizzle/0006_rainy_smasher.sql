@@ -1,1 +1,0 @@
-ALTER TABLE "images" ADD CONSTRAINT "images_uuid_unique" UNIQUE("uuid");

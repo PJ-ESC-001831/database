@@ -1,2 +1,0 @@
-CREATE INDEX IF NOT EXISTS "name_idx" ON "transactions" USING btree ("transaction_id");--> statement-breakpoint
-CREATE UNIQUE INDEX IF NOT EXISTS "email_idx" ON "transactions" USING btree ("reference");

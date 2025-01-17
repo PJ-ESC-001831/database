@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "drizzle-kit:generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "drizzle-kit:up": "drizzle-kit up --config ./drizzle.config.ts",
     "drizzle-kit:migrate": "drizzle-kit migrate --config ./drizzle.config.ts"
   },
   "repository": {

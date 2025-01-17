@@ -1,1 +1,0 @@
-ALTER TABLE "campaigns" ALTER COLUMN "cost_base" DROP NOT NULL;

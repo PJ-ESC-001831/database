@@ -26,7 +26,7 @@ export const transactions = pgTable(
       .references(() => users.id),
     reference: text('reference').notNull().unique(),
     state: text('state').notNull(),
-    amount: text('balance').notNull(),
+    amount: integer('balance').notNull(), // Cast floats to integers to avoid having rounding errors
     createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: timestamp('updated_at').default(sql`CURRENT_TIMESTAMP`),
   },
