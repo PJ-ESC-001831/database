@@ -7,5 +7,5 @@ export const buyers = pgTable('buyers', {
   id: serial('id').primaryKey(),
   userId: serial('user_id')
     .notNull()
-    .references(() => users.id),
+    .references(() => users.id, { onDelete: 'cascade' }),
 });

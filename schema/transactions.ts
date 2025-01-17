@@ -7,12 +7,16 @@ import { users } from './users';
 // Define the Transaction table
 export const transactions = pgTable('transactions', {
   id: serial('id').primaryKey(),
-  campaignId: integer('campaign_id').notNull().references(() => campaigns.id),
+  campaignId: integer('campaign_id')
+    .notNull()
+    .references(() => campaigns.id),
   transactionId: text('transaction_id').notNull(),
-  buyerId: integer('buyer_id').notNull().references(() => users.id),
-  createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
+  buyerId: integer('buyer_id')
+    .notNull()
+    .references(() => users.id),
   reference: text('reference').notNull(),
   state: text('state').notNull(),
-  balance: text('balance').notNull(),
+  amount: text('balance').notNull(),
+  createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
   updatedAt: timestamp('updated_at').default(sql`CURRENT_TIMESTAMP`),
 });
