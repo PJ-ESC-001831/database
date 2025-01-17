@@ -71,6 +71,13 @@
       "when": 1737111209658,
       "tag": "0009_high_thor_girl",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1737111692408,
+      "tag": "0010_faithful_hellcat",
+      "breakpoints": true
     }
   ]
 }
