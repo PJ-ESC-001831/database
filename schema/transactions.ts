@@ -14,9 +14,10 @@ export const transactions = pgTable('transactions', {
   buyerId: integer('buyer_id')
     .notNull()
     .references(() => users.id),
-  reference: text('reference').notNull(),
+  reference: text('reference').notNull().unique(),
   state: text('state').notNull(),
   amount: text('balance').notNull(),
   createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
   updatedAt: timestamp('updated_at').default(sql`CURRENT_TIMESTAMP`),
 });
+
