@@ -15,6 +15,13 @@
       "when": 1737123439980,
       "tag": "0001_rich_groot",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1738732264525,
+      "tag": "0002_unknown_gambit",
+      "breakpoints": true
     }
   ]
 }
