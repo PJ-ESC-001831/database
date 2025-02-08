@@ -10,7 +10,7 @@ import {
 import { sql } from 'drizzle-orm';
 
 import { campaigns } from './campaigns';
-import { users } from './users';
+import { buyers } from './buyers';
 
 // Define the Transaction table
 export const transactions = pgTable(
@@ -23,7 +23,7 @@ export const transactions = pgTable(
     transactionId: text('transaction_id').notNull(),
     buyerId: integer('buyer_id')
       .notNull()
-      .references(() => users.id),
+      .references(() => buyers.id),
     reference: text('reference').notNull().unique(),
     checkoutLink: text('checkout_link'),
     balance: integer('balance').notNull(), // Cast floats to integers to avoid having rounding errors

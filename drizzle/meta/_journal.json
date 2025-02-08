@@ -22,6 +22,13 @@
       "when": 1738732264525,
       "tag": "0002_unknown_gambit",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1739039093889,
+      "tag": "0003_abnormal_thunderbolts",
+      "breakpoints": true
     }
   ]
 }
