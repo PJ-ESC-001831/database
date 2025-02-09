@@ -20,7 +20,7 @@ export const transactions = pgTable(
     campaignId: integer('campaign_id')
       .notNull()
       .references(() => campaigns.id),
-    transactionId: text('transaction_id').notNull(),
+    transactionId: text('transaction_id'),
     buyerId: integer('buyer_id')
       .notNull()
       .references(() => buyers.id),
