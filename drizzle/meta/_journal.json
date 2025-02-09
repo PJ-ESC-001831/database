@@ -29,6 +29,13 @@
       "when": 1739039093889,
       "tag": "0003_abnormal_thunderbolts",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1739089237442,
+      "tag": "0004_lonely_sasquatch",
+      "breakpoints": true
     }
   ]
 }

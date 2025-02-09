@@ -24,7 +24,7 @@ export const transactions = pgTable(
     buyerId: integer('buyer_id')
       .notNull()
       .references(() => buyers.id),
-    reference: text('reference').notNull().unique(),
+    publicId: text('public_id').notNull().unique(),
     checkoutLink: text('checkout_link'),
     balance: integer('balance').notNull(), // Cast floats to integers to avoid having rounding errors
     createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
@@ -33,7 +33,7 @@ export const transactions = pgTable(
   (table) => {
     return {
       transactionIdIdx: index('name_idx').on(table.transactionId),
-      referenceIdx: uniqueIndex('email_idx').on(table.reference),
+      publicIdx: uniqueIndex('email_idx').on(table.publicId),
     };
   },
 );
